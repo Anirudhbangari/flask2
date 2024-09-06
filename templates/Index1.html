@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Scraped Data</title>
+</head>
+<body>
+    <h1>Amazon Scraped Data</h1>
+    <ul>
+        {% for item in amazon_items %}
+            <li>{{ item.name }} - {{ item.price }}</li>
+        {% else %}
+            <li>No data available from Amazon or an error occurred.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
